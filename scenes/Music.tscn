@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d22ohtv8ebf7a"]
+
+[ext_resource type="AudioStream" uid="uid://mq81q2ckel3q" path="res://assets/sounds/bgm/20. Discover the Abyss.mp3" id="1_uqo5v"]
+
+[node name="Music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_uqo5v")
+autoplay = true

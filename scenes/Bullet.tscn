@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuwcwt6dw5t6v"]
+
+[ext_resource type="Script" path="res://scripts/Bullet.gd" id="1_w404n"]
+[ext_resource type="Texture2D" uid="uid://lqvuiqiugcfd" path="res://assets/sprites/enemy/boss/Mecha-stone Golem 0.1/weapon PNG/arm_projectile_glowing.png" id="2_mdngi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anj2u"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xajle"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgafj"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4r1e"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7enwb"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nprhl"]
+atlas = ExtResource("2_mdngi")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b11cm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anj2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xajle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgafj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4r1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7enwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nprhl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtxsa"]
+size = Vector2(33, 12)
+
+[node name="Bullet" type="Area2D"]
+light_mask = 0
+visibility_layer = 2
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_w404n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_b11cm")
+autoplay = "default"
+frame_progress = 0.4091
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(27.5, -13)
+shape = SubResource("RectangleShape2D_vtxsa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
