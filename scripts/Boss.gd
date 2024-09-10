@@ -24,7 +24,6 @@ var health = 100:
 			DEF = 5
 			find_child("FiniteStateMachine").change_state("ArmorBuff")
 
-
 #Turn off physics process right away
 func _ready():
 	set_physics_process(false)
