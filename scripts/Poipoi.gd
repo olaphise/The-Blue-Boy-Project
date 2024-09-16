@@ -14,7 +14,7 @@ func _process(delta):
 	
 	#ANIMATION
 	if direction:
-		animationSprite.play("jump")
+		animationSprite.play("idle")
 	elif direction == 0:
 		animationSprite.play("idle")
 	

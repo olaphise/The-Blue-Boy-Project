@@ -424,10 +424,10 @@ text = "Boss Slained!
 "
 
 [node name="debug" type="Label" parent="."]
-offset_left = -24.0
-offset_top = -44.0
-offset_right = 25.0
-offset_bottom = -21.0
+offset_left = -34.0
+offset_top = -74.0
+offset_right = 15.0
+offset_bottom = -51.0
 theme_override_font_sizes/font_size = 8
 text = "debug"
 horizontal_alignment = 1

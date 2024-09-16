@@ -156,7 +156,7 @@ position = Vector2(-50, 370)
 shape = SubResource("WorldBoundaryShape2D_skg6p")
 
 [node name="Poipoi" parent="." instance=ExtResource("5_iljcf")]
-position = Vector2(1008, 192)
+position = Vector2(1057, 160)
 
 [node name="Character" type="Node" parent="."]
 
@@ -164,7 +164,7 @@ position = Vector2(1008, 192)
 position = Vector2(1554, 141)
 
 [node name="player" parent="Character" instance=ExtResource("1_up4bd")]
-position = Vector2(1938, 120)
+position = Vector2(120, 96)
 
 [node name="Camera2D" type="Camera2D" parent="Character/player"]
 visible = false
